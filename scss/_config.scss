@@ -32,6 +32,16 @@ $background-opacity: 0.9;
   }
 }
 
+// Set text Color
+// needs to be function to return something
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 // Media Query Mixins
 // All Media queries effect those below
 @mixin mediaSm {
